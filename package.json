@@ -1,0 +1,46 @@
+{
+  "name": "runmemo",
+  "version": "0.1.0",
+  "description": "Zero-block, daemonless progress briefs for coding agents — streams concise milestone digests to local HTML or Feishu webhook.",
+  "author": "yzxz1996",
+  "license": "MIT",
+  "homepage": "https://github.com/yzxz1996/runmemo#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yzxz1996/runmemo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yzxz1996/runmemo/issues"
+  },
+  "type": "module",
+  "bin": {
+    "runmemo": "./bin/runmemo.mjs"
+  },
+  "files": [
+    "bin/",
+    "src/",
+    "assets/",
+    "README.md",
+    "README_EN.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "test": "node --test",
+    "check": "node --test",
+    "demo": "node ./bin/runmemo.mjs demo"
+  },
+  "keywords": [
+    "claude-code",
+    "codex",
+    "opencode",
+    "coding-agent",
+    "agent-hooks",
+    "observability",
+    "progress-brief",
+    "feishu",
+    "cli"
+  ]
+}

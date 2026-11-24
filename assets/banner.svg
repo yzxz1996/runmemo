@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="340" viewBox="0 0 1280 340" fill="none" role="img" aria-label="runmemo banner">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1280" y2="340" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0B1220"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#091623"/>
+    </linearGradient>
+    <radialGradient id="glowLeft" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(180 80) rotate(25) scale(520 300)">
+      <stop offset="0%" stop-color="#10B981" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#10B981" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowRight" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1100 260) rotate(-18) scale(540 320)">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="#38BDF8" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="120" y2="120" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#38BDF8"/>
+    </linearGradient>
+    <linearGradient id="cardStroke" x1="0" y1="0" x2="1280" y2="340" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#34D399" stop-opacity="0.35"/>
+      <stop offset="50%" stop-color="#334155" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#38BDF8" stop-opacity="0.35"/>
+    </linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#94A3B8" stroke-opacity="0.06" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Base Container -->
+  <rect x="2" y="2" width="1276" height="336" rx="22" fill="url(#bg)"/>
+  <rect x="2" y="2" width="1276" height="336" rx="22" fill="url(#grid)"/>
+  <rect x="2" y="2" width="1276" height="336" rx="22" fill="url(#glowLeft)"/>
+  <rect x="2" y="2" width="1276" height="336" rx="22" fill="url(#glowRight)"/>
+  <rect x="2" y="2" width="1276" height="336" rx="22" stroke="url(#cardStroke)" stroke-width="1.5"/>
+
+  <!-- Left Geometric Mark (Pulse + Brief Card) -->
+  <g transform="translate(88 80)">
+    <rect x="0" y="0" width="96" height="96" rx="24" fill="#0F1B2D" stroke="url(#accent)" stroke-width="2"/>
+    <rect x="20" y="24" width="56" height="8" rx="4" fill="#34D399"/>
+    <rect x="20" y="42" width="40" height="7" rx="3.5" fill="#94A3B8" fill-opacity="0.75"/>
+    <rect x="20" y="57" width="48" height="7" rx="3.5" fill="#64748B" fill-opacity="0.65"/>
+    <circle cx="72" cy="70" r="10" fill="#0B1220" stroke="#38BDF8" stroke-width="2"/>
+    <circle cx="72" cy="70" r="4" fill="#34D399"/>
+  </g>
+
+  <!-- Title & Tagline -->
+  <text x="214" y="128" fill="#F8FAFC" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="60" font-weight="800" letter-spacing="-1.5">runmemo</text>
+  <rect x="498" y="88" width="76" height="28" rx="14" fill="#10B981" fill-opacity="0.14" stroke="#10B981" stroke-opacity="0.45"/>
+  <text x="536" y="107" text-anchor="middle" fill="#6EE7B7" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="600">v0.1.0</text>
+
+  <text x="216" y="168" fill="#CBD5E1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="22" font-weight="500">Zero-block, daemonless progress briefs for coding agents</text>
+  <text x="216" y="202" fill="#94A3B8" font-family="'PingFang SC', 'Microsoft YaHei', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18">纯旁观 · 零守护进程 · 电报式 AI 工作进展简报（HTML 看板 / 飞书卡片）</text>
+
+  <!-- Right Floating Decorative Telegraphic Card Mock -->
+  <g transform="translate(836 58)">
+    <rect x="0" y="0" width="372" height="176" rx="16" fill="#0D1829" fill-opacity="0.92" stroke="#334155" stroke-width="1.2"/>
+    <rect x="0" y="0" width="372" height="36" rx="16" fill="#10B981" fill-opacity="0.14"/>
+    <rect x="0" y="20" width="372" height="16" fill="#10B981" fill-opacity="0.14"/>
+    <circle cx="22" cy="18" r="5" fill="#34D399"/>
+    <text x="36" y="23" fill="#A7F3D0" font-family="'PingFang SC', 'Microsoft YaHei', 'Segoe UI', sans-serif" font-size="12.5" font-weight="600">order-svc · 结账 E2E 回归全过</text>
+
+    <circle cx="22" cy="60" r="2.8" fill="#38BDF8"/>
+    <text x="34" y="64" fill="#E2E8F0" font-family="'PingFang SC', 'Microsoft YaHei', 'Segoe UI', sans-serif" font-size="12.5">修复订单超时幂等锁并补 4 条单测</text>
+    <circle cx="22" cy="84" r="2.8" fill="#38BDF8"/>
+    <text x="34" y="88" fill="#E2E8F0" font-family="'PingFang SC', 'Microsoft YaHei', 'Segoe UI', sans-serif" font-size="12.5">发布 Staging Rev.42 · 探针 200 OK</text>
+    <circle cx="22" cy="108" r="2.8" fill="#38BDF8"/>
+    <text x="34" y="112" fill="#E2E8F0" font-family="'PingFang SC', 'Microsoft YaHei', 'Segoe UI', sans-serif" font-size="12.5">Playwright 12/12 通过（首次超时已重跑）</text>
+
+    <line x1="18" y1="130" x2="354" y2="130" stroke="#1E293B" stroke-width="1"/>
+    <rect x="18" y="142" width="90" height="20" rx="6" fill="#1E293B"/>
+    <text x="63" y="156" text-anchor="middle" fill="#94A3B8" font-family="ui-monospace, Consolas, monospace" font-size="11">Claude Code</text>
+    <rect x="116" y="142" width="40" height="20" rx="6" fill="#F59E0B" fill-opacity="0.16"/>
+    <text x="136" y="156" text-anchor="middle" fill="#FCD34D" font-family="ui-monospace, Consolas, monospace" font-size="11">L3</text>
+    <rect x="164" y="142" width="68" height="20" rx="6" fill="#10B981" fill-opacity="0.16"/>
+    <text x="198" y="156" text-anchor="middle" fill="#6EE7B7" font-family="ui-monospace, Consolas, monospace" font-size="11">3 子任务</text>
+    <text x="352" y="156" text-anchor="end" fill="#64748B" font-family="ui-monospace, Consolas, monospace" font-size="11">async · 0 block</text>
+  </g>
+
+  <!-- Bottom Feature Pills -->
+  <g transform="translate(88 258)">
+    <rect x="0" y="0" width="132" height="34" rx="17" fill="#1E293B" stroke="#334155"/>
+    <circle cx="20" cy="17" r="4" fill="#F97316"/>
+    <text x="76" y="22" text-anchor="middle" fill="#E2E8F0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" font-weight="600">Claude Code</text>
+
+    <rect x="146" y="0" width="118" height="34" rx="17" fill="#1E293B" stroke="#334155"/>
+    <circle cx="166" cy="17" r="4" fill="#34D399"/>
+    <text x="215" y="22" text-anchor="middle" fill="#E2E8F0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" font-weight="600">Codex CLI</text>
+
+    <rect x="278" y="0" width="118" height="34" rx="17" fill="#1E293B" stroke="#334155"/>
+    <circle cx="298" cy="17" r="4" fill="#38BDF8"/>
+    <text x="347" y="22" text-anchor="middle" fill="#E2E8F0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" font-weight="600">OpenCode</text>
+
+    <rect x="410" y="0" width="146" height="34" rx="17" fill="#1E293B" stroke="#334155"/>
+    <text x="483" y="22" text-anchor="middle" fill="#CBD5E1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" font-weight="500">HTML Dashboard</text>
+
+    <rect x="570" y="0" width="152" height="34" rx="17" fill="#1E293B" stroke="#334155"/>
+    <text x="646" y="22" text-anchor="middle" fill="#CBD5E1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" font-weight="500">Feishu Webhook</text>
+
+    <rect x="736" y="0" width="160" height="34" rx="17" fill="#0F2922" stroke="#10B981" stroke-opacity="0.45"/>
+    <text x="816" y="22" text-anchor="middle" fill="#6EE7B7" font-family="ui-monospace, Consolas, monospace" font-size="12.5" font-weight="600">0 Deps · Node &gt;= 18</text>
+  </g>
+</svg>

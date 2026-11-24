@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="390" viewBox="0 0 840 390" fill="none" role="img" aria-label="Feishu interactive card preview">
+  <defs>
+    <linearGradient id="stage" x1="0" y1="0" x2="840" y2="390" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+    <linearGradient id="feishuHeader" x1="0" y1="0" x2="720" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#EA580C"/>
+      <stop offset="100%" stop-color="#F97316"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Outer Presentation Backdrop -->
+  <rect x="2" y="2" width="836" height="386" rx="18" fill="url(#stage)" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Mock Chat Header -->
+  <circle cx="38" cy="30" r="10" fill="#10B981" fill-opacity="0.22" stroke="#34D399" stroke-width="1.5"/>
+  <circle cx="38" cy="30" r="4" fill="#34D399"/>
+  <text x="58" y="34" fill="#E2E8F0" font-family="'PingFang SC', 'Microsoft YaHei', -apple-system, sans-serif" font-size="13.5" font-weight="600">runmemo · 研发群简报机器人</text>
+  <rect x="268" y="19" width="46" height="20" rx="6" fill="#334155"/>
+  <text x="291" y="33" text-anchor="middle" fill="#94A3B8" font-family="-apple-system, sans-serif" font-size="11" font-weight="600">BOT</text>
+  <text x="806" y="34" text-anchor="end" fill="#64748B" font-family="ui-monospace, Consolas, monospace" font-size="11.5">Webhook · HMAC-SHA256</text>
+
+  <!-- Feishu Interactive Card Body -->
+  <g transform="translate(60 56)">
+    <rect x="0" y="0" width="720" height="304" rx="12" fill="#FFFFFF"/>
+
+    <!-- Card Header -->
+    <path d="M 0 12 C 0 5.37 5.37 0 12 0 H 708 C 714.63 0 720 5.37 720 12 V 50 H 0 V 12 Z" fill="url(#feishuHeader)"/>
+    <circle cx="28" cy="25" r="8" fill="#FED7AA"/>
+    <text x="46" y="30" fill="#FFFFFF" font-family="'PingFang SC', 'Microsoft YaHei', -apple-system, sans-serif" font-size="16" font-weight="700">order-svc · e2e-runner 完成阶段任务</text>
+
+    <!-- Bullets Section -->
+    <text x="24" y="84" fill="#1F2329" font-family="'PingFang SC', 'Microsoft YaHei', -apple-system, sans-serif" font-size="14.5">• 结账 E2E 重跑 12/12 通过，已落盘 Trace</text>
+    <text x="24" y="110" fill="#1F2329" font-family="'PingFang SC', 'Microsoft YaHei', -apple-system, sans-serif" font-size="14.5">• 发布 Staging Helm Rev.42，健康探针 200 OK</text>
+    <text x="24" y="136" fill="#1F2329" font-family="'PingFang SC', 'Microsoft YaHei', -apple-system, sans-serif" font-size="14.5">• 修复 timeout.ts 幂等锁边界，补 4 条单测全过</text>
+
+    <!-- Divider -->
+    <line x1="24" y1="158" x2="696" y2="158" stroke="#E5E7EB" stroke-width="1"/>
+
+    <!-- Meta Fields -->
+    <text x="24" y="186" fill="#1F2329" font-family="'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="13.5" font-weight="700">验证</text>
+    <text x="88" y="186" fill="#374151" font-family="'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="13.5">重试通过（1 过 / 1 败）</text>
+
+    <text x="24" y="212" fill="#1F2329" font-family="'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="13.5" font-weight="700">改动</text>
+    <rect x="88" y="196" width="150" height="22" rx="5" fill="#F1F5F9" stroke="#E2E8F0"/>
+    <text x="163" y="211" text-anchor="middle" fill="#0F172A" font-family="ui-monospace, Consolas, monospace" font-size="12">src/order/timeout.ts</text>
+
+    <text x="24" y="238" fill="#1F2329" font-family="'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="13.5" font-weight="700">子任务</text>
+    <text x="88" y="238" fill="#374151" font-family="'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="13.5">✅ backend-coder  ·  ✅ staging-deployer  ·  ✅ e2e-runner</text>
+
+    <!-- Alert Callout -->
+    <rect x="24" y="252" width="672" height="26" rx="6" fill="#FFF7ED" stroke="#FDBA74"/>
+    <text x="36" y="269" fill="#9A3412" font-family="'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="12.5" font-weight="600">留意：过程中有 1 次失败/重试（已自动重跑恢复）</text>
+
+    <!-- Footer Note -->
+    <text x="24" y="295" fill="#8F959E" font-family="'PingFang SC', 'Microsoft YaHei', ui-monospace, sans-serif" font-size="12">Claude Code · L3 · 1s · 本轮完成 · #12~#16 · runmemo</text>
+  </g>
+</svg>

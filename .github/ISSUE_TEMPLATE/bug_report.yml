@@ -1,0 +1,37 @@
+name: Bug Report
+description: Report a bug or unexpected behavior in runmemo
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Problem Description
+      description: Briefly describe what went wrong and what you expected to happen.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce
+      description: Exact commands or hook events that triggered the issue.
+      placeholder: |
+        1. Run `runmemo detect`
+        2. Run `runmemo install`
+        3. Observe output...
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, Node.js version (`node -v`), runmemo version, and Coding Agent(s) used.
+      placeholder: "Windows 11 / macOS 15, Node v22.x, runmemo v0.1.0, Claude Code / Codex / OpenCode"
+    validations:
+      required: true
+  - type: textarea
+    id: doctor
+    attributes:
+      label: "`runmemo doctor` / `runmemo detect --json` Output (Optional)"
+      description: Paste output after redacting any personal paths if desired.
+      render: text

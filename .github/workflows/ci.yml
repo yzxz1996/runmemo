@@ -1,0 +1,50 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    name: ${{ matrix.os }} / Node ${{ matrix.node-version }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        node-version: [18, 20, 22]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Syntax check all ES modules
+        run: >
+          node -e "
+          const fs = require('fs');
+          const path = require('path');
+          const { execFileSync } = require('child_process');
+          function walk(dir) {
+            for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+              const p = path.join(dir, entry.name);
+              if (entry.isDirectory()) walk(p);
+              else if (entry.name.endsWith('.mjs')) {
+                execFileSync(process.execPath, ['--check', p], { stdio: 'inherit' });
+              }
+            }
+          }
+          ['bin', 'src', 'test'].forEach(walk);
+          "
+
+      - name: Run offline test suite
+        run: npm test
+
+      - name: Run offline demo smoke check
+        run: |
+          npm run demo
+          node -e "const fs=require('fs'); if (!fs.existsSync('demo-output/dashboard.html')) process.exit(1);"
