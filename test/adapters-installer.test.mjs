@@ -65,11 +65,13 @@ test("isolated install / 2x idempotency / uninstall works for CC, Codex (BOM & T
     assert.ok(!toml.includes("hooks = false"));
     assert.ok(toml.includes("codex_hooks = true"));
 
-    // OpenCode shim 只能具名导出 RunmemoPlugin 且注入 RUNMEMO_NODE_BIN
+    // OpenCode shim 只能具名导出 RunmemoPlugin 且注入 RUNMEMO_NODE_BIN（复制到 .mjs 以兼容 Node 18 无 package.json 临时目录导入）
     const ocPath = path.join(tmpProj, ".opencode/plugins/runmemo.js");
     const ocText = fs.readFileSync(ocPath, "utf8");
     assert.ok(ocText.includes("RUNMEMO_NODE_BIN"));
-    const ocMod = await import(pathToFileURL(ocPath).href);
+    const verifyShimPath = path.join(tmpProj, "verify-opencode-shim.mjs");
+    fs.writeFileSync(verifyShimPath, ocText, "utf8");
+    const ocMod = await import(pathToFileURL(verifyShimPath).href);
     assert.equal(typeof ocMod.RunmemoPlugin, "function");
     assert.equal(ocMod.default, undefined);
 
